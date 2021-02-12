@@ -22,14 +22,12 @@ $('.banner-slide').owlCarousel({
         }
     }
 })
-$('.product-slider').owlCarousel({
+
+
+$('.testimonial-slide').owlCarousel({
     loop: true,
     margin: 10,
-    nav: true,
-    navText: [
-        prevIcon, nextIcon
-    ],
-    dots: false,
+    nav: false,
     pagination: false,
     autoplay: true,
     autoplaySpeed: 1000,
@@ -38,34 +36,11 @@ $('.product-slider').owlCarousel({
         0: {
             items: 1
         },
-        500: {
-            items: 2
-        },
-        800: {
-            items: 3
+        600: {
+            items: 1
         },
         1000: {
-            items: 4
+            items: 1
         }
     }
 })
-
-
-/*accordion*/
-var accordions = document.getElementsByClassName("accordion");
-
-for (var i = 0; i < accordions.length; i++) {
-    accordions[i].onclick = function() {
-        this.classList.toggle('is-open');
-
-        var content = this.nextElementSibling;
-        if (content.style.maxHeight) {
-            // accordion is currently open, so close it
-            content.style.maxHeight = null;
-        } else {
-            // accordion is currently closed, so open it
-            content.style.maxHeight = content.scrollHeight + "px";
-        }
-    }
-}
-/*accordion*/

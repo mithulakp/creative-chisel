@@ -14,7 +14,8 @@ body {
 .header-data {
   font-family: 'Inter', sans-serif;
   font-size: 12px;
-  line-height: 28px; }
+  line-height: 28px;
+  font-weight: 400; }
 
 .logo {
   width: 175px; }
@@ -37,7 +38,7 @@ nav {
       text-decoration: underline; }
 
 .primary-heading {
-  font-weight: 400;
+  font-weight: 200;
   font-size: 40px;
   font-family: 'Inter', sans-serif; }
 
@@ -78,7 +79,8 @@ nav {
 .footer-links {
   display: grid;
   grid-template-columns: 32% 30% 25%;
-  column-gap: 6%; }
+  column-gap: 6%;
+  border-bottom: 1px solid #a3a3a3; }
 
 .address-type {
   font-size: 11px;
@@ -88,6 +90,41 @@ nav {
 .contact {
   font-weight: 200; }
 
+.copyright {
+  color: #a3a3a3;
+  font-size: 11px;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif; }
+
+/*----------------menu---------------*/
+#toggle {
+  display: none;
+  float: right; }
+
+label {
+  display: none;
+  width: 26px;
+  height: 2px;
+  top: 63px;
+  margin-top: 36px;
+  position: absolute;
+  background-color: #000000;
+  z-index: 1; }
+  label::before, label::after {
+    content: '';
+    width: 26px;
+    height: 2px;
+    background-color: #000000;
+    position: absolute;
+    transition: all 0.2s ease; }
+  label::before {
+    top: -300%;
+    transform-origin: left top; }
+  label::after {
+    bottom: -300%;
+    transform-origin: left bottom; }
+
+/*----------------menu---------------*/
 .col-xs-1,
 .col-sm-1,
 .col-md-1,
@@ -802,6 +839,32 @@ img {
   height: 300px;
   width: 100%; }
 
+.testimonial-overlay {
+  background: linear-gradient(to right, #35404e, rgba(53, 64, 78, 0.96), transparent, transparent); }
+
+.testi-content {
+  width: 45%;
+  color: #e8e6e2;
+  font-size: 24px;
+  font-weight: 100; }
+
+.testimonial-item {
+  padding: 117px 0px; }
+
+.name {
+  width: 45%;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 11px; }
+
+.insta-text {
+  font-style: italic;
+  font-size: 35px;
+  font-weight: 500; }
+
+.photography {
+  background-size: cover; }
+
 .tac {
   text-align: center; }
 
@@ -978,9 +1041,125 @@ a {
 
 @media only screen and (min-width: 0) and (max-width: 764px) {
   .container {
-    max-width: 100%; }
-  /*-------------spacing--------------*/
-  /*-------------spacing--------------*/
-  /*-------------header--------------*/
-  /*-------------header--------------*/
-  /*-------------body--------------*/ }
+    max-width: 95%; }
+  /*------------------------------spacing-------------------------*/
+  .global-vertical-padding {
+    padding-top: 35px;
+    padding-bottom: 35px; }
+  .global-top-padding {
+    padding-top: 35px; }
+  .global-bottom-padding {
+    padding-bottom: 35px; }
+  /*------------------------------spacing-------------------------*/
+  /*------------------------------header--------------------------*/
+  .navbar {
+    display: none; }
+  .primary-heading {
+    font-size: 25px; }
+  .secondary-heading {
+    font-size: 15px; }
+  .baner-content {
+    width: 100%;
+    padding-top: 135px; }
+  .logo {
+    width: 125px; }
+  /*-------------------------menu-------------------------*/
+  nav {
+    padding-left: 0; }
+  .navbar {
+    position: absolute;
+    z-index: 20;
+    margin-left: -500px;
+    font-size: 13px; }
+    .navbar li {
+      display: block;
+      line-height: 43px; }
+  label {
+    display: block;
+    cursor: pointer;
+    z-index: 21;
+    right: 20px; }
+  #toggle:checked ~ label::before {
+    transform: rotateZ(49deg);
+    left: 10px; }
+  #toggle:checked ~ label::after {
+    transform: rotateZ(-55deg) translate(-6px, 5px);
+    left: 10px; }
+  #toggle:checked ~ label {
+    width: 0%;
+    right: 50px; }
+  #toggle:checked ~ .navbar {
+    display: block;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    transition: ease .5s;
+    background-color: white;
+    width: 100%;
+    height: 100vh;
+    padding: 98px 20px; }
+  /*------------------------------menu----------------------------*/
+  /*-------------------------------header-------------------------*/
+  /*-------------------------------body---------------------------*/
+  .item {
+    height: 350px; }
+  .btn-primary {
+    width: 95%; }
+  .button-spacing {
+    width: 60%; }
+  .intro {
+    width: 100%; }
+  .intro-head {
+    font-size: 21px; }
+  .intro-content {
+    width: 92%; }
+  .horizontal-text-align {
+    padding: 140px 0px 61px 0px; }
+  .features {
+    margin: 0 auto;
+    width: 94%;
+    grid-template-columns: 100%;
+    row-gap: 2%; }
+  .link-text {
+    width: 67%; }
+  .left-margin {
+    margin-left: 0; }
+  .testi-content {
+    width: 75%;
+    margin: 0 auto;
+    font-size: 15px; }
+  .name {
+    width: 75%;
+    margin: 0 auto; }
+  .testimonial-item {
+    padding: 0px; }
+  .testimonial-item {
+    padding: 0px 0px; }
+  .testimonial-slide .owl-dots {
+    width: 15% !important;
+    padding-top: 47px; }
+  .owl-theme .owl-dots .owl-dot span {
+    margin: 0px !important; }
+  .article {
+    grid-template-columns: 100%;
+    row-gap: 2%; }
+  .insta-text {
+    font-size: 26px; }
+  .insta-icon {
+    width: 22px; }
+  .article-head {
+    width: 100%;
+    font-size: 18px; }
+  .para {
+    width: 75%; }
+  .logo {
+    width: 125px; }
+  /*---------------------------body*-----------------------------*/
+  /*---------------------------footer---------------------------*/
+  .footer-links {
+    grid-template-columns: 100%; }
+  .social-icon {
+    padding-bottom: 15px; }
+  .left-margin {
+    margin-left: 0; }
+  /*--------------------------footer----------------------------*/ }

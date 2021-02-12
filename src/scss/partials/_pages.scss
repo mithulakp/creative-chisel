@@ -149,3 +149,35 @@ img {
     height: 300px;
     width: 100%;
 }
+
+.testimonial-overlay {
+    background: linear-gradient(to right, rgba(53, 64, 78, 15), rgba(53, 64, 78, .96), transparent, transparent);
+}
+
+.testi-content {
+    width: 45%;
+    color: #e8e6e2;
+    font-size: 24px;
+    font-weight: 100;
+}
+
+.testimonial-item {
+    padding: 117px 0px;
+}
+
+.name {
+    width: 45%;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+}
+
+.insta-text {
+    font-style: italic;
+    font-size: 35px;
+    font-weight: 500;
+}
+
+.photography {
+    background-size: cover;
+}

@@ -19,6 +19,7 @@ body {
     font-family: 'Inter', sans-serif;
     font-size: 12px;
     line-height: 28px;
+    font-weight: 400;
 }
 
 .logo {
@@ -48,7 +49,7 @@ nav {
 }
 
 .primary-heading {
-    font-weight: 400;
+    font-weight: 200;
     font-size: 40px;
     font-family: 'Inter', sans-serif;
 }
@@ -97,6 +98,7 @@ nav {
     display: grid;
     grid-template-columns: 32% 30% 25%;
     column-gap: 6%;
+    border-bottom: 1px solid #a3a3a3;
 }
 
 .address-type {
@@ -108,3 +110,49 @@ nav {
 .contact {
     font-weight: 200;
 }
+
+.copyright {
+    color: #a3a3a3;
+    font-size: 11px;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+}
+
+
+/*----------------menu---------------*/
+
+#toggle {
+    display: none;
+    float: right;
+}
+
+label {
+    display: none;
+    width: 26px;
+    height: 2px;
+    top: 63px;
+    margin-top: 36px;
+    position: absolute;
+    background-color: $primary-color;
+    z-index: 1;
+    &::before,
+    &::after {
+        content: '';
+        width: 26px;
+        height: 2px;
+        background-color: $primary-color;
+        position: absolute;
+        transition: all 0.2s ease;
+    }
+    &::before {
+        top: -300%;
+        transform-origin: left top;
+    }
+    &::after {
+        bottom: -300%;
+        transform-origin: left bottom;
+    }
+}
+
+
+/*----------------menu---------------*/
